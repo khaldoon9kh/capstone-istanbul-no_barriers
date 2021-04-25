@@ -23,7 +23,7 @@ const Stories = () => {
   }, []);
 
   i18next.on("languageChanged", (lng) => {
-    let ref = i18next.translator.language;
+    const ref = i18next.translator.language;
     if (ref === "en") {
       setLangRef(ENGLISH_LANGUAGE);
     } else if (ref === "ar") {
@@ -35,7 +35,7 @@ const Stories = () => {
 
   if (!posts) {
     return <LoadingPage />;
-  } else {
+  }
     return (
       <Container>
         {posts
@@ -49,7 +49,7 @@ const Stories = () => {
           })}
       </Container>
     );
-  }
+
 };
 
 export default Stories;
